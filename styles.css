@@ -1,0 +1,55 @@
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#container {
+    display: flex;
+}
+
+#webcam-container {
+    flex: 1;
+}
+
+#training-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#training-screen {
+    text-align: center;
+}
+
+#training-table {
+    width: 640px; /* Tamanho fixo da tabela */
+    height: 480px; /* Tamanho fixo da tabela */
+    border-collapse: collapse;
+    position: absolute; /* Posicionamento absoluto para sobrepor */
+    top: 50%; /* Centraliza verticalmente */
+    left: 50%; /* Centraliza horizontalmente */
+    transform: translate(-50%, -40%); /* Ajusta o posicionamento para o centro */
+    opacity: 0.5; /* Opacidade da tabela */
+    z-index: 1; /* Colocar a tabela acima do vídeo */
+    font-size: 30px; /* Tamanho da fonte */
+}
+
+#training-table td {
+    width: 33.33%; /* Tamanho fixo das células */
+    height: 33.33%; /* Tamanho fixo das células */
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo semi-transparente */
+    font-size: 30px; /* Tamanho da fonte */
+}
+
+#training-table td:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.5); /* Cor de fundo semi-transparente para células pares */
+}

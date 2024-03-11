@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Karate Training</title>
+    <link rel="stylesheet" href="styles.css">    
+</head>
+<body>
+    <div id="initial-screen">
+        <h2>Escolha os golpes para o treinamento:</h2>
+        <form id="training-form">
+            <label for="kicks">Golpes:</label><br>
+            <input type="checkbox" id="kizame-zuki" name="kicks" value="Kizame Zuki">
+            <label for="kizame-zuki">Kizame Zuki</label><br>
+            <input type="checkbox" id="gyaku-zuki" name="kicks" value="Gyaku Zuki">
+            <label for="gyaku-zuki">Gyaku Zuki</label><br>
+            <input type="checkbox" id="mawashi-geri" name="kicks" value="Mawashi Geri">
+            <label for="mawashi-geri">Mawashi Geri</label><br>
+            <input type="checkbox" id="ura-mawashi-geri" name="kicks" value="Ura Mawashi Geri">
+            <label for="ura-mawashi-geri">Ura Mawashi Geri</label><br>
+            <input type="checkbox" id="kizami-mawashi-geri" name="kicks" value="Kizami Mawashi Geri">
+            <label for="kizami-mawashi-geri">Kizami Mawashi Geri</label><br>
+            <input type="checkbox" id="kizami-ura-mawashi-geri" name="kicks" value="Kizami Ura Mawashi Geri">
+            <label for="kizami-ura-mawashi-geri">Kizami Ura Mawashi Geri</label><br>
+            <input type="checkbox" id="yoko-geri" name="kicks" value="Yoko Geri">
+            <label for="yoko-geri">Yoko Geri</label><br>>
+
+            <label for="reaction-time">Tempo de reação (segundos):</label><br>
+            <input type="number" id="reaction-time" name="reaction-time" min="1" value="5"><br>
+
+            <label for="training-time">Tempo de treinamento (minutos):</label><br>
+            <input type="number" id="training-time" name="training-time" min="1" value="3"><br>
+
+            <label for="execution-time">Tempo de execução do golpe (segundos):</label><br>
+            <input type="number" id="execution-time" name="execution-time" min="1" value="3"><br><br>
+
+            <button type="submit">Iniciar Treinamento</button>
+        </form>
+    </div>
+
+    <div id="training-screen" style="display: none;">
+        <h2>Treinamento em andamento...</h2>
+        <p>Tempo restante: <span id="countdown"></span></p>
+        <div id="container">
+            <div id="webcam-container">
+                <video id="videoElement" autoplay></video>
+            </div>
+            <div id="training-container">
+                <table id="training-table">
+                    <tr>
+                    <td id="1x1"></td>
+                    <td id="1x2"></td>
+                    <td id="1x3"></td>
+                </tr>
+                <tr>
+                    <td id="2x1"></td>
+                    <td id="2x2"></td>
+                    <td id="2x3"></td>
+                </tr>
+                <tr>
+                    <td id="3x1"></td>
+                    <td id="3x2"></td>
+                    <td id="3x3"></td>
+                </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
