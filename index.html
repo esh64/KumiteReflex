@@ -11,13 +11,13 @@
         <h2>Escolha os golpes para o treinamento:</h2>
         <form id="training-form">
             <label for="moves">Movimentos:</label><br>
-            <input type="checkbox" id="avançar" name="moves" value="Avançar">
+            <input type="checkbox" id="avançar" name="kicks" value="Avançar">
             <label for="avançar">Avançar</label><br>
-            <input type="checkbox" id="recuar" name="moves" value="Recuar">
+            <input type="checkbox" id="recuar" name="kicks" value="Recuar">
             <label for="recuar">Recuar</label><br>
-            <input type="checkbox" id="desviar-direita" name="moves" value="Desviar direita">
+            <input type="checkbox" id="desviar-direita" name="kicks" value="Desviar direita">
             <label for="desviar-direita">Desviar Direita</label><br>
-            <input type="checkbox" id="desviar-esquerda" name="moves" value="Desviar esquerda">
+            <input type="checkbox" id="desviar-esquerda" name="kicks" value="Desviar esquerda">
             <label for="desviar-esquerda">Desviar Esquerda</label><br>
             <label for="kicks">Golpes:</label><br>
             <input type="checkbox" id="kizame-zuki" name="kicks" value="Kizame Zuki">
@@ -36,13 +36,13 @@
             <label for="yoko-geri">Yoko Geri</label><br>>
 
             <label for="reaction-time">Tempo de reação (segundos):</label><br>
-            <input type="number" id="reaction-time" name="reaction-time" min="0" step="any" value="5"><br>
+            <input type="number" id="reaction-time" name="reaction-time" min="1" step="any" value="5"><br>
 
             <label for="training-time">Tempo de treinamento (minutos):</label><br>
             <input type="number" id="training-time" name="training-time" min="1" value="3"><br>
 
             <label for="execution-time">Tempo de execução do golpe (segundos):</label><br>
-            <input type="number" id="execution-time" name="execution-time" min="0" step="any" value="3"><br><br>
+            <input type="number" id="execution-time" name="execution-time" min="1" step="any" value="3"><br><br>
 
             <button type="submit">Iniciar Treinamento</button>
         </form>
