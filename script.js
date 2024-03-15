@@ -29,6 +29,8 @@ function startTraining(selectedKicks, reactionTime, trainingTime, executionTime)
     const b_2x3 = [];
     const b_3x2 = [];
     
+    console.log(selectedKicks)
+
     selectedKicks.forEach((kick) => {
         if (kicks1x2.includes(kick)) {
             b_1x2.push(kick);
