@@ -18,10 +18,11 @@ function startTraining(selectedKicks, reactionTime, trainingTime, executionTime)
     document.getElementById("initial-screen").style.display = "none";
     document.getElementById("training-screen").style.display = "block";
    
-    const kicks1x2 = ["Kizame Zuki", "Mawashi Geri", "Ura Mawashi Geri", "Kizami Mawashi Geri", "Kizami Ura Mawashi Geri"];
-    const kicks2x2 = ["Gyaku Zuki", "Mawashi Geri", "Kizami Mawashi Geri", "Yoko Geri", "Avançar", "Recuar"];
+    const kicks1x2 = ["Avançar", "Kizame Zuki", "Mawashi Geri", "Ura Mawashi Geri", "Kizami Mawashi Geri", "Kizami Ura Mawashi Geri"];
+    const kicks2x2 = ["Gyaku Zuki", "Mawashi Geri", "Kizami Mawashi Geri", "Yoko Geri"];
     const kicks2x1 = ["Desviar para esquerda"];
     const kicks2x3 = ["Desviar para direita"];
+    const kicks3x2 = ["Recuar"];
 
     const b_1x2 = [];
     const b_2x2 = [];
@@ -43,6 +44,9 @@ function startTraining(selectedKicks, reactionTime, trainingTime, executionTime)
         }
         if (kicks2x3.includes(kick)) {
             b_2x3.push(kick);
+        }
+        if (kicks3x2.includes(kick)) {
+            b_3x2.push(kick);
         }
     });
 
@@ -123,7 +127,8 @@ function getRandomIndex(max) {
 }
 
 function getRandomTime(baseTime) {
-    return Math.floor(Math.random() * (2.5 * baseTime - baseTime) + baseTime);
+    //return Math.floor(Math.random() * (2.5 * baseTime - baseTime) + baseTime);
+    return Math.random() * (2.5 * baseTime - baseTime) + baseTime;
 }
 
 function clearTable() {
