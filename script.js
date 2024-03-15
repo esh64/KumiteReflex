@@ -23,11 +23,11 @@ function startTraining(selectedKicks, reactionTime, trainingTime, executionTime)
     const kicks2x1 = ["Desviar para esquerda"];
     const kicks2x3 = ["Desviar para direita"];
 
-    const b_1x2 = ['','Avançar'];
-    const b_2x2 = ['',];
-    const b_2x1 = ['',"Desviar para esquerda"];
-    const b_2x3 = ['',"Desviar para direita"];
-    const b_3x2 = ['','Recuar'];
+    const b_1x2 = [];
+    const b_2x2 = [];
+    const b_2x1 = [];
+    const b_2x3 = [];
+    const b_3x2 = [];
     
     selectedKicks.forEach((kick) => {
         if (kicks1x2.includes(kick)) {
@@ -121,7 +121,7 @@ function getRandomIndex(max) {
 }
 
 function getRandomTime(baseTime) {
-    return Math.floor(Math.random() * (1.75 * baseTime - baseTime) + baseTime);
+    return Math.floor(Math.random() * (2.5 * baseTime - baseTime) + baseTime);
 }
 
 function clearTable() {
